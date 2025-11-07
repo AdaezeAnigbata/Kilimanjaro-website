@@ -1,0 +1,776 @@
+/* =============================
+  /* =============================
+  GLOBAL STYLES
+============================= */
+html {
+ height: 100%;
+ overflow-x: hidden;
+ scroll-behavior: smooth;
+}
+
+
+* {
+ margin: 0;
+ padding: 0;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ box-sizing: border-box;
+}
+
+
+.nav-container, .login-btn, .option-card, .Send .btn, .giftcard img {
+   transition: all 0.3s ease;
+}
+
+
+/* =============================
+  NAVIGATION BAR
+============================= */
+.nav-container {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #dc042a;
+ color: white;
+ padding: 10px 20px;
+ flex-wrap: wrap;
+ position: relative;
+}
+
+
+.logo img {
+ width: 180px;
+ height: 40px;
+}
+
+
+.hamburger-menu {
+ display: none;
+ font-size: 30px;
+ cursor: pointer;
+ color: white;
+ order: 1;
+}
+
+
+.logo {
+ order: 2;
+}
+
+
+.nav-list {
+ display: flex;
+ list-style: none;
+ gap: 50px;
+ align-items: center;
+ order: 3;
+}
+
+
+.nav-list li a {
+ color: white;
+ text-decoration: none;
+}
+
+
+.nav-list a:hover {
+ text-decoration: underline;
+}
+
+
+.login-btn {
+ background-color: white;
+ color: #dc042a;
+ border: none;
+ padding: 8px 15px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+
+.login-btn:hover {
+ background-color: #f8d6dc;
+}
+
+
+/* =============================
+  HERO / SECTION ONE
+============================= */
+.hero {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ min-height: 80vh;
+ padding: 40px 20px;
+ background: url("https://kilimanjaro-restaurants.com/images/background-cover.jpg")
+ center/cover no-repeat;
+ text-align: center;
+}
+
+
+.content-wrapper {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ max-width: 1200px;
+ width: 100%;
+}
+
+
+.topic {
+ max-width: 700px;
+ width: 90%;
+ padding: 20px;
+ border-radius: 10px;
+ color: black;
+}
+
+
+h1 {
+ font-size: 50px;
+ font-weight: bold;
+}
+
+
+.sub-topic {
+ margin: 20px 0;
+ font-size: 1.2rem;
+}
+
+
+/*OPTIONS SECTION */
+.options {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 30px;
+ margin-top: 20px;
+}
+
+
+.option-card {
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ padding: 1rem;
+ width: 270px;
+ height: 150px;
+ cursor: pointer;
+ background: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ color: #333;
+}
+
+
+/* Updated style for hover and when a radio is checked */
+.option-card:hover, .option-card:has(input:checked) {
+ border-color: #dc042a;
+ transform: translateY(-4px);
+ box-shadow: 0 4px 10px rgba(220, 4, 42, 0.2);
+}
+
+
+.option-card input[type="radio"] {
+ width: 20px;
+ height: 20px;
+ accent-color: #dc042a;
+}
+
+
+.icon-text {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ text-align: left;
+ gap: 5px;
+}
+
+
+.icon-text img {
+ width: 40px;
+ height: 40px;
+ margin-bottom: 5px;
+}
+
+
+.icon-text h2 {
+ font-size: 1.2rem;
+ color: #000;
+ margin: 0;
+}
+
+
+.icon-text p {
+ font-size: 0.9rem;
+ color: #666;
+ margin: 0;
+}
+
+
+
+
+
+
+/* =============================
+  GIFT CARD SECTION
+============================= */
+.gift-card-area {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 40px;
+ background: url("https://kilimanjaro-restaurants.com/images/background-cover.jpg")
+   center/cover no-repeat;
+ padding: 60px 20px;
+}
+
+
+.giftcard img {
+ width: 650px;
+ max-width: 90%;
+ border-radius: 10px;
+ display: block;
+ position: relative;
+ transition: transform 0.4s ease;
+ max-height: 20%;
+}
+
+
+.giftcard img:hover {
+ transform: scale(1.05);
+}
+
+
+.Send {
+ max-width: 500px;
+ color: #333;
+}
+
+
+
+
+.Send h2 {
+ font-size: 28px;
+ margin-bottom: 15px;
+}
+
+
+.Send p {
+ font-size: 16px;
+ line-height: 1.6;
+ margin-bottom: 25px;
+ color: #555;
+}
+
+
+.Send .btn {
+ display: inline-block;
+ background-color: #dc042a;
+ color: #fff;
+ padding: 12px 28px;
+ border-radius: 4px;
+ text-decoration: none;
+ font-size: 16px;
+}
+
+
+.Send .btn:hover {
+ background-color: #b51c3a;
+ transform: translateY(-3px);
+}
+
+
+
+
+
+
+/*INSTANT PAYMENT SECTION */
+.instant-payment {
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ flex-wrap: wrap;
+ gap: 50px;
+ padding: 100px 10%;
+ flex-direction: row;
+ color: white;
+ background-image:
+ linear-gradient(to right, #72001B);
+ overflow: hidden; /* Ensures image doesn't bleed outside section */
+  margin-top: -120px; /* Pull the section up into previous space */
+ padding-top: 160px; /* Add padding so text doesn’t get cut off */
+ border-radius: 0 0 0 0;
+ z-index: 2;
+}
+
+
+.instant-payment::after {
+ content: "";
+ background: url("https://kilimanjaro-restaurants.com/images/explore-wallet.webp") no-repeat right bottom;
+ background-size: contain;
+ position: absolute;
+ top: -40px;
+ right: 0;
+ bottom: 0;
+ width: 45%;
+ z-index: 1;
+}
+
+
+.E-wallet {
+ max-width: 520px;
+ width: 50%;
+ margin-right: auto;
+ flex-basis: 90%;
+ padding-right: 40px;
+ text-align: left;
+ z-index: 2;
+}
+
+
+
+
+.E-wallet h2 {
+font-size: 28px;
+margin-bottom: 15px;
+font-weight: 700;
+line-height: 1.3;
+}
+
+
+.E-wallet p {
+font-size: 16px;
+font-weight: normal;
+line-height: 1.6;
+margin-bottom: 25px;
+opacity: 0.9;
+}
+
+
+/* Reusing the .Send .btn style for the E-wallet button */
+.E-wallet .btn {
+ display: inline-block;
+ background-color: white; /* Button background becomes white */
+ color: #dc042a; /* Button text becomes red */
+ padding: 14px 36px;
+ border: 2px solid white;
+ border-radius: 30px;
+ text-decoration: none;
+ font-size: 16px;
+ letter-spacing: 0.5px;
+ transition: all 0.3s ease;
+}
+
+
+.E-wallet .btn:hover {
+ background-color: #f0f0f0; /* Lighter white on hover */
+ transform: translateY(-3px);
+}
+
+
+.btn {
+  transition: all 0.3s ease;
+ }
+
+
+ .btn.bounce {
+   animation: bounceIn 0.8s ease forwards;
+ }
+
+
+ .ad{
+  position: relative;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ background: url("https://kilimanjaro-restaurants.com/images/background-cover.jpg") center center/cover no-repeat;
+ background-size: cover;
+ min-height: 90vh;
+ padding: 100px 10%;
+ overflow: hidden;
+ z-index: 1;
+ }
+
+
+
+
+ .browse{
+  max-width: 550px;
+  flex-basis: 50%;
+  width: 50%;
+  margin-right: 0;
+  padding-right: 40px;
+  text-align: left;
+  z-index: 2;
+ }
+
+
+ .browse h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+ }
+
+
+ .store-buttons {
+ display: flex;
+ gap: 15px;
+}
+
+
+.store-buttons img{
+ width: 180px;
+ height: auto;
+ transition: transform 0.3s ease;
+}
+
+
+.store-buttons img:hover{
+ transform: scale(1.05);
+}
+
+
+.ad-images{
+ position: relative;
+ width: 45%;
+ height: 480px;
+ display: flex;
+ justify-content: flex-start;
+ gap: 0;
+}
+ad-images img {
+ position: absolute;
+ width: 250px;
+ height: auto;
+ border-radius: 25px;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+ transition: transform 0.3s ease;
+ will-change: transform;
+ top: 50%;
+}
+
+
+ad-images img:first-child {
+   /* Left phone - tilted back */
+   left: 10%;
+   transform: translateY(-50%) rotate(-8deg);
+   z-index: 3;
+ }
+
+
+ .ad-images img:last-child {
+   /* Right phone - tilted forward, overlapping the first */
+   left: 40%;
+   transform:  rotate(6deg);
+   z-index: 4;
+ }
+
+
+.ad-images img:hover {
+ transform: scale(1.05);
+}
+
+
+/*MAIN-FOOTER STYLE*/
+.main-footer{
+display: flex;
+background-color: black;
+padding: 15px 5%;
+color: white;
+flex-direction: column;
+gap: 5px;
+align-items: center;
+order: 5;
+justify-content: center;
+}
+
+
+.footer-nav{
+ list-style: none;
+ display: flex;
+   gap: 25px;
+   margin-bottom: 5px;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.footer-nav li a {
+   color: white;
+   text-decoration: none;
+   font-size: 0.95rem;
+   padding: 5px 10px;
+   transition: color 0.3s;
+}
+
+
+.footer-nav li a:hover {
+   text-decoration: underline;
+}
+
+
+/* Social Media Icons */
+.social-icons {
+   list-style: none;
+   display: flex;
+   gap: 15px;
+   margin-bottom: 20px; /* Space above the copyright line */
+   padding: 0;
+}
+
+
+.social-icons li a img {
+   width: 25px;
+   height: 25px;
+   opacity: 0.7;
+   transition: opacity 0.3s ease;
+}
+
+
+.social-icons li a img:hover {
+   opacity: 1;
+}
+
+
+/* Copyright Bar */
+.copyright {
+   padding-top: 8px;
+   width: 100%;
+   font-size: 0.8rem;
+   color: #ccc;
+   text-align: center;
+}
+
+
+/* =============================
+  MEDIA QUERIES
+============================= */
+
+
+/* Tablets and smaller (<= 992px) */
+@media (max-width: 992px) {
+ h1 { font-size: 2.4rem; }
+
+
+ .gift-card-area {
+   flex-direction: column;
+   text-align: center;
+   padding: 50px 20px;
+   gap: 20px;
+ }
+
+
+ .giftcard img {
+   width: 75%;
+   max-width: 380px;
+ }
+
+
+ .Send { max-width: 90%; }
+
+
+ .instant-payment {
+   flex-direction: column-reverse;
+   text-align: center;
+   padding: 70px 30px;
+   gap: 20px;
+   margin-top: -50px;
+   align-items: center;
+ }
+
+
+ .instant-payment::after {
+   content: "";
+   position: static;
+   width: 70%;
+   height: 200px;
+   margin: -10px auto 0;
+   background-position: center top;
+ }
+
+
+ .E-wallet { width: 100%; margin-top: -10px; }
+
+
+ .E-wallet h2 { font-size: 24px; }
+ .E-wallet h4 { font-size: 15px; }
+
+
+ .hamburger-menu { display: block; }
+
+
+ .nav-list {
+   display: none;
+   flex-direction: column;
+   width: 100%;
+   background-color: #dc042a;
+   position: absolute;
+   top: 60px;
+   left: 0;
+   padding: 15px 20px;
+ }
+
+
+ .nav-list.active { display: flex; z-index: 10; }
+ .nav-list li { margin: 10px 0; }
+ .login-btn { width: 100%; }
+
+
+ .option-card { width: 90%; }
+ .Send h2 { font-size: 22px; }
+ .Send p { font-size: 14px; }
+
+
+  .ad {
+   flex-direction: column;
+   text-align: center;
+   padding: 80px 40px;
+   align-items: center;
+   gap: 30px;
+   min-height: auto;
+ }
+ .ad-images{
+   width: 100%;
+   height: 350px; /* Give the container a fixed height */
+   margin-top: 20px;
+   justify-content: center; /* Center the images' starting point */
+   position: relative;
+ }
+
+
+ .ad-images img {
+   width: 180px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+ }
+  .ad-images img:first-child {
+   left: 28%;
+   transform: translateY(-50%) rotate(-8deg);
+ }
+
+
+ .ad-images img:last-child {
+   /* FIX: Adjusted to sit beside the first one in the centered tablet view */
+   left: 48%;
+   transform: translateY(-50%) rotate(8deg);
+ }
+
+
+  .ad h3 {
+   font-size: 1.8rem; /* smaller headline */
+ }
+
+
+ .browse {
+   width: 100%;
+   text-align: center;
+   flex-basis: 100%;
+ margin: 20px;
+ padding: 0;
+ }
+
+
+ .browse .store-buttons  {
+   justify-content: center;
+ }
+
+
+}
+
+
+/* Phones (<= 576px) */
+@media (max-width: 576px) {
+ h1 { font-size: 1.8rem; }
+
+
+ .option-card { width: 100%; }
+
+
+ .icon-text img {
+   width: 30px;
+   height: 30px;
+ }
+
+
+ .Send h2 { font-size: 20px; }
+ .Send p { font-size: 12px; }
+
+
+ .Send .btn {
+   font-size: 14px;
+   padding: 8px 16px;
+ }
+
+
+ .E-wallet h2 { font-size: 20px; }
+ .E-wallet h4 { font-size: 13px; }
+
+
+ /* smaller space between image and text */
+ .instant-payment {
+   gap: 10px;
+   padding: 40px 20px;
+   margin-top: -60px;
+ }
+
+
+ .instant-payment::after {
+   margin-top: -15px;
+ }
+
+
+ /*NEW: Gift card image above text for mobile */
+ .gift-card-area {
+   flex-direction: column-reverse;
+ }
+
+
+ .giftcard {
+   order: -1; /* brings the image above */
+ }
+
+
+  .ad {
+   padding: 60px 20px;
+   gap: 20px;
+ }
+
+
+ .ad-images {
+   display: none;
+ }
+  /* Ensure text occupies full width when images are hidden */
+ .browse {
+   width: 100%;
+   flex-basis: 100%;
+   padding-right: 0;
+ }
+  .browse h3 {
+   font-size: 1.3rem;
+ }
+
+
+ .browse .store-buttons a {
+   padding: 10px 20px;
+   font-size: 0.9rem;
+ }
+
+
+ .browse h3 {
+   font-size: 1.3rem;
+ }
+
+
+ .browse .store-buttons a {
+   padding: 10px 20px;
+   font-size: 0.9rem;
+ }
+}
+ 
