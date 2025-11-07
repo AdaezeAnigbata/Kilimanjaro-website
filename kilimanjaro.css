@@ -466,7 +466,7 @@ ad-images img:first-child {
  .ad-images img:last-child {
    /* Right phone - tilted forward, overlapping the first */
    left: 40%;
-   transform:  rotate(6deg);
+   transform:translateY(-50%) rotate(-8deg);
    z-index: 4;
  }
 
